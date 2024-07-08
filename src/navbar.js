@@ -4,10 +4,11 @@ const Navbar = () => {
     <h1>new navbar</h1>
     <div className="link">
       <a href="/">home</a>
-      <a href="/create" style={{
+       <a href="/create">blog</a>   {/*style={{
         color: 'white',
         backgroundColor: '#f1356d'
-      }} >blog</a>   {/* you may also use inline styling */}
+      }} */}
+      {/* you may also use inline styling  */}
     </div>
    </nav>
   );
