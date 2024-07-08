@@ -28,8 +28,8 @@ import Home from './home';
 // }
 
 function App (){
-  const blog = '';
-  const like = 80;
+  // const blog = '';
+  // const like = 80;
   return (
     <div className='App'>
       <Navbar/>
