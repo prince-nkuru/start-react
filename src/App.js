@@ -1,4 +1,5 @@
 import './App.css';
+import Navbar from './navbar';
 
 // function Square({ value }) {
 //   return <button className="square">{value}</button>;
@@ -31,6 +32,7 @@ function App (){
   const like = 80;
   return (
     <div className='App'>
+      <Navbar/>
       <div className='content'>
         <h1>app content</h1>
         <h1>{blog? blog: 'no new blog'}</h1>
@@ -41,3 +43,4 @@ function App (){
   )
 }
 export default App
+
