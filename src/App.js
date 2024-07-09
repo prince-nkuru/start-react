@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './navbar';
+import Home from './home';
 
 // function Square({ value }) {
 //   return <button className="square">{value}</button>;
@@ -34,10 +35,11 @@ function App (){
     <div className='App'>
       <Navbar/>
       <div className='content'>
-        <h1>app content</h1>
-        <h1>{blog? blog: 'no new blog'}</h1>
+        <Home/>
+        {/* <h1>app content</h1> */}
+        {/* <h1>{blog? blog: 'no new blog'}</h1>
         <p>liked {like} times</p>              {/* boolean and object are not used as variable ?? */}
-        <p>{Math.floor(Math.random() * 10)}</p>
+        {/* <p>{Math.floor(Math.random() * 10)}</p>  */}
       </div>
     </div>
   )
