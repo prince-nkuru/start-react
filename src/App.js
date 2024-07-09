@@ -27,10 +27,14 @@ import './App.css';
 // }
 
 function App (){
+  const blog = '';
+  const like = 80;
   return (
     <div className='App'>
       <div className='content'>
         <h1>app content</h1>
+        <h1>{blog? blog: 'no new blog'}</h1>
+        <p>liked {like} times</p>
       </div>
     </div>
   )
