@@ -2,19 +2,19 @@ import { useState } from "react";
 
 const Home = () => {
 
-  const [name, setName] = useState('prince');
-  const Greeting = (name, e) => {
+  let [count, setName] = useState(0);
+  const Greeting = (name) => {
 
-    setName('nkurunziza');
+    setName(prevCount => prevCount + 1);
        const short = name? 'hello ' + name: 'hello there'
-       console.log(short, e.target);
+       console.log(short, count++);
   }
   return (  
     <div className="home">
       <h2>homepage</h2>
-      <p>{name}</p>
-      <button onClick={(e) =>{
-      Greeting('prince', e);
+      <p>{count}</p>
+      <button onClick={() =>{
+      Greeting('prince');
       }}>click me</button>
     </div>
   );
