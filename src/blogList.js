@@ -1,7 +1,9 @@
-const BlogList = (props) => {
+const BlogList = (blogs, titles, handleDelete) => {
 
-  const blogs = props.blogs;
-  const titles = props.titles;
+  // const blogs = props.blogs;
+  // const titles = props.titles;
+
+
   return ( 
     
     <div className="home">
