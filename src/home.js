@@ -61,6 +61,8 @@ const Home = () => {
     setBlogs(newBlogs);
   }
 
+  console.log("blogs state:", blogs); // Debugging statement
+
   return (
     <div className="home">
       <BlogList blogs={blogs} title="All Blogs" handleDelete={handleDelete} /> {/* Added handleDelete prop */}
