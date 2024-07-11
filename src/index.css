@@ -46,3 +46,71 @@
   color: #f1356d;
   margin-bottom: 8px;
 }
+
+.change {
+  background-color: #f1356d;
+  border: none;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.name {
+  color: black;
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+.decrement {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: cornflowerblue;
+  border-radius: 6px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.counterDisplay {
+  font-size: 80px;
+  color: black;
+  font-weight: 900px;
+  margin-top: 10px;
+}
+
+/**************************CSS FOR COLOR PICKER**************************************8*/
+
+.color-picker-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.color-picker-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.color-display {
+  width: 300px;
+  height: 300px;
+  border: 5px solid gray;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s ease;
+  margin-bottom: 25px;
+}
