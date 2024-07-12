@@ -4,6 +4,7 @@ import Naming from './setName'
 import Counter from './counter'
 import MyComponent from './onChange';
 import ColorPicker from './colorPicker';
+import  MyObject from './object';
 
 // function Square({ value }) {
 //   return <button className="square">{value}</button>;
@@ -48,6 +49,9 @@ function App (){
         <Counter/>
         <MyComponent/>
         <ColorPicker/>
+      </div>
+      <div>
+        <MyObject/>
       </div>
     </div>
   )
