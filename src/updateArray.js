@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+  import { useState } from "react";
 
 function UpdateArray(){
   const [cars,setCars] = useState([]);
@@ -10,6 +11,13 @@ function UpdateArray(){
   const handleCarAdd = () => {
     const newCar = {year:carYear, make: carMake, model: carModel};
     setCars(c => [...c, newCar]);
+
+    setCarYear(new Date().getFullYear());
+    setCarMake('');
+    setCarModel('');
+  }
+  const handleCarRemove = (index) => {
+    setCars(c => c.filter((_, i) => i !== index))
   }
 
 
@@ -29,17 +37,19 @@ function UpdateArray(){
             
             {cars.map((car, index) => 
             
-            <li key={index}>
+            <li key={index} onClick={() => handleCarRemove(index)}>
               {car.year} {car.make} {car.model}
             </li> )}
 
            </ul>
            <input type="number" value={carYear} onChange={handleCarYear}/>
-           <input type="text" onChange={handleCarMake} placeholder="Enter car make"/>
-           <input type="text" onChange={handleCarModel} placeholder="Enter model"/>
+           <input type="text" value={carMake}  onChange={handleCarMake} placeholder="Enter car make"/>
+           <input type="text" value={carModel}  onChange={handleCarModel} placeholder="Enter model"/>
            <button onClick={handleCarAdd}> add car</button>
          </div>)
 }
 
 
 export default  UpdateArray;
+
+ 
