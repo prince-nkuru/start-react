@@ -6,6 +6,7 @@ import MyComponent from './onChange';
 import ColorPicker from './colorPicker';
 import  MyObject from './object';
 import Foods from './array';
+import UpdateArray from './updateArray';
 
 // function Square({ value }) {
 //   return <button className="square">{value}</button>;
@@ -52,6 +53,8 @@ function App (){
         <ColorPicker/>
         <MyObject/>
         <Foods/>
+
+        <UpdateArray/>
       </div>
       
     </div>
