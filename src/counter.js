@@ -5,13 +5,13 @@ import {useState} from 'react'
 
   const increment = () => {
     // good practice to use updater function
-    // setCount(count => count + 1)
-    setCount(count + 1)
-    
+    setCount(count => count + 1) 
+    setCount(count => count + 1) 
+    setCount(count => count + 1) 
   }
 
   const decrement = () => {
-    setCount(count - 1)
+    setCount(count => count - 1)
   }
 
   const reset = () => {
