@@ -7,8 +7,9 @@ function MyComp(){
   const [heigth, setHeight] = useState(window.innerHeight)
 
   useEffect(() => {
+    window.addEventListener('resize', Resize)
     // document.title = `count: ${count}`
-  }, [count])
+  }, [])
 
   const change = () => {
     setCount(c => c + 1)
@@ -26,6 +27,8 @@ function MyComp(){
       <p style={{color: color}}>count : {count}</p>
       <button onClick={change}>add</button>
       <button onClick={changeColor}>color</button>
+      <p>width: {width}</p>
+      <p>height: {heigth}</p>
     </div>
   )
 }
