@@ -3,9 +3,11 @@ import { useState, useEffect } from "react";
 function MyComp(){
   const [count, setCount] = useState(0);
   const [color, setColor] = useState('green')
+  const [width, setWidth] = useState(window.innerWidth)
+  const [heigth, setHeight] = useState(window.innerHeight)
 
   useEffect(() => {
-    document.title = `count: ${count}`
+    // document.title = `count: ${count}`
   }, [count])
 
   const change = () => {
@@ -13,6 +15,10 @@ function MyComp(){
   }
   const changeColor = () => {
     setColor(c => c === 'green'? 'red' : 'green')
+  }
+  const Resize = () => {
+    setWidth(window.innerWidth)
+    setHeight(window.innerHeight)
   }
 
   return (
