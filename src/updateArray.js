@@ -16,7 +16,7 @@ function UpdateArray(){
     setCarMake('');
     setCarModel('');
   }
-  const handleCarRemove = (index) => {
+  const handleCarRemove = (index) => {                 // i need more insight on this logic
     setCars(c => c.filter((_, i) => i !== index))
   }
 
