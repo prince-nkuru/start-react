@@ -63,6 +63,7 @@
 // export default App
 
    import TodoList from "./todoList" 
+   import MyComp from "./useEffect"
 
 function App (){
   
@@ -70,6 +71,11 @@ function App (){
       <>
       <div>
         <TodoList/>
+        
+      </div>
+
+      <div>
+      <MyComp/>
       </div>
       </>
     )
