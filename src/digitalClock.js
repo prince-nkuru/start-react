@@ -2,21 +2,36 @@ import { useState, useEffect } from "react";
 
 function DigitalClock(){
 
-  const [clock, setClock] = useState('00:00')
-
-  const handleClock = () => {
-    setClock('00:01');
-  }
+  const [clock, setClock] = useState(new Date())
 
   useEffect(()=> {
-    console.log('changed');
-  })
+    const intervalId = setInterval(() => {
+      setClock(new Date())
+    }, 1000);
+
+    return () => {
+      clearInterval(intervalId);
+    }
+  }, [])
+
+
+  function formatTime (){
+    let hours = clock.getHours();
+    const min = clock.getMinutes();
+    const seconds = clock.getSeconds();
+    const meridian = hours > 12 ? "PM": 'AM';
+    const formattedMin = min < 10? `0${min}` :  `${min}`;
+    const formattedSec = seconds < 10? `0${seconds}` :  `${seconds}`
+
+    hours = hours % 12 || 12;
+
+    return `${hours} : ${formattedMin} : ${formattedSec}  ${meridian}`
+  }
   return (
   <div className="clock-container">
     <div className="clock">
-      <span>clock: {clock}</span>
-      <button onClick={handleClock}>add</button>
-    </div>
+      <span>clock: {formatTime()}</span>
+     </div>
   </div>
   )
 }
