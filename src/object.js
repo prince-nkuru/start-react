@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+
+// UPDATE STATE OF OBJECT USING REACT/////////////////////////////
+
 function MyObject (){
   const [car, setCar] = useState({year:2024,
                                   make:'ford',
@@ -13,7 +16,7 @@ function MyObject (){
    const handleMake = (event) => {
     setCar(c => ({...c, make:event.target.value}))
    }
-   
+
    const handleModel = (event) => {
     setCar(c => ({...c,model:event.target.value}))
    }
